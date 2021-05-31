@@ -2,6 +2,10 @@
     font-family:Poppins;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     margin:0;
     padding:0;
@@ -21,7 +25,7 @@ body {
 h1 {
     position:relative; 
     z-index:3;
-    font-size:7vw;
+    font-size: 5.5em;
     font-family:Parisienne, cursive;
     margin-bottom:0px;
 }
@@ -34,7 +38,7 @@ h2 {
 
 header {
     grid-area: header;
-    height:40vh;
+    height:15em;
     background-image: url("./banner.jpg");
     background-size: cover;
     background-position-y: 30%;
@@ -57,14 +61,14 @@ header::after {
 main {
     grid-area: main;
     background-color:seashell;
-    padding-bottom:40vh;
+    padding-bottom: 35em;
 }
 
 #frenchText {
     font-size:larger;
     font-weight:bolder;
-    word-spacing:5px;
-    line-height: 50px;
+    word: spacing 0.5em;;
+    line-height: 3em;
     width:90%;
     margin:0 auto;
 }
@@ -76,7 +80,7 @@ span:hover {
 #popup {
     visibility:hidden;
     width: 200px;
-    font-size:14px;
+    font-size:1em;
     height:auto;
     padding: 10px 10px;
     border-radius:6px;
@@ -90,7 +94,7 @@ span:hover {
 }
 
 h3 {
-    font-size:18px;
+    font-size:1.2em;
 }
 
 footer {

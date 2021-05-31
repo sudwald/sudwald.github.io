@@ -89,8 +89,10 @@ let frenchDictionary = [
 ]
 
 //instruct user to click not hover if on mobile
-if (window.innerWidth < 844) {
-    document.getElementById('hoverorclick').innerHTML = "Click on any word to get started"
+if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
+    document.getElementById('hoverorclick').innerHTML = "Click on any word to get started";
+    document.getElementById('popup').style.width = "70%";
+    document.getElementById('popup').style.fontSize = "3em";
 }
 
 //whenever a defined <span> is hovered over it should invoke translateWord() and pass it the word/phrase being hovered over
@@ -141,10 +143,21 @@ function translateWord(word,spanIndex) {
         document.getElementById("popup").style.visibility="visible"
         //get the positional info of the span element (word) on which the user is hovering
         spanInfo = document.getElementsByTagName('span')[spanIndex].getBoundingClientRect()
+        //if user is on a mobile, position popup vertically central
+        
+        let xposition=0
+        let yposition=0
+        if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
+            xposition = (screen.width / 2) - (screen.width*0.15) + 10
+            yposition = (Math.floor(spanInfo.top) + window.scrollY + document.getElementsByTagName('span')[spanIndex].offsetHeight);    
+        }
+        //if user not on mobile, position popup under the selected word
+        else {
         //specifically get the horizontal and vertical position of the span element
         //plus some maths to work out position needed to place the popup just under the hovered word vertically, and centred beneath it horizontally
-        let xposition = (Math.floor(spanInfo.left)) - ((220 - document.getElementsByTagName('span')[spanIndex].offsetWidth)/2)
-        let yposition = (Math.floor(spanInfo.top) + window.scrollY + document.getElementsByTagName('span')[spanIndex].offsetHeight);
+            xposition = (Math.floor(spanInfo.left)) - ((220 - document.getElementsByTagName('span')[spanIndex].offsetWidth)/2)
+            yposition = (Math.floor(spanInfo.top) + window.scrollY + document.getElementsByTagName('span')[spanIndex].offsetHeight);
+        }
         // set the CSS position of the popup paragraph accordingly
         document.getElementById("popup").style.left = `${xposition}px`
         document.getElementById("popup").style.top = `${yposition}px`
