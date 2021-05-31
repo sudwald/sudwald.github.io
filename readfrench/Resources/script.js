@@ -87,7 +87,7 @@ function translateWord(word,spanIndex) {
         //specifically get the horizontal and vertical position of the span element
         //plus some maths to work out position needed to place the popup just under the hovered word vertically, and centred beneath it horizontally
         let xposition = (Math.floor(spanInfo.left)) - ((250 - document.getElementsByTagName('span')[spanIndex].offsetWidth)/2)
-        let yposition = (Math.floor(spanInfo.top) + document.getElementsByTagName('span')[spanIndex].offsetHeight)
+        let yposition = (Math.floor(spanInfo.top) + window.scrollY + document.getElementsByTagName('span')[spanIndex].offsetHeight);
         // set the CSS position of the popup paragraph accordingly
         document.getElementById("popup").style.left = `${xposition}px`
         document.getElementById("popup").style.top = `${yposition}px`
