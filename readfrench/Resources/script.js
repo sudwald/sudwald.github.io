@@ -88,6 +88,11 @@ let frenchDictionary = [
     {"french": "yeux", "english":"eyes", "tip":"Fun fact - the singular of 'eye' is 'oeil' and the plural is 'yeux'. Don't worry, this is one of the crazier exceptions in French!"},
 ]
 
+//instruct user to click not hover if on mobile
+if (window.screen.width < 844) {
+    document.getElementById('hoverorclick').innerHTML === "Click on any word to get started"
+}
+
 //whenever a defined <span> is hovered over it should invoke translateWord() and pass it the word/phrase being hovered over
 //get all the <span> elements in an array
 let spanArray = document.getElementsByTagName('span');
