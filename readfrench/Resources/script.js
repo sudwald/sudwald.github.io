@@ -37,7 +37,7 @@ let frenchDictionary = [
     {"french": "ils", "english":"they", "tip":"You'll see this one a lot"},
     {"french": "n'avaient pas", "english":"didn't have", "tip":"we already saw 'avaient' (had). 'Ne ... pas' means 'not, didn't'. It goes around the verb like a sandwich!"},
     {"french": "de temps", "english":"any time", "tip":"'temps' is time - and there's that 'de' again, hanging around doing nothing particularly important to us."},
-    {"french": "perdre", "english":"to lose", "tip":""},
+    {"french": "perdre", "english":"lose", "tip":""},
     {"french": "des sornettes", "english":"nonsense", "tip":"You know, larks and japes, and all that"},
 ]
 
