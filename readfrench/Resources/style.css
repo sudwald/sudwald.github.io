@@ -57,7 +57,7 @@ header::after {
 main {
     grid-area: main;
     background-color:seashell;
-    padding-bottom:8vh;
+    padding-bottom:40vh;
 }
 
 #frenchText {
