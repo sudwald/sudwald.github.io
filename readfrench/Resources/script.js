@@ -59,7 +59,7 @@ let frenchDictionary = [
     {"french": "par-dessus", "english":"over", "tip":"The opposite, 'par-dessous', means 'under' - what a difference an 'o' makes!"},
     {"french": "parfaitement", "english":"perfectly", "tip":"Words which end in -ly in English (such as perfectly) often end in -ment in French - so look out for this pattern"},
     {"french": "pas", "english":"not, didn't", "tip":"'Ne ... pas' means 'not, didn't'. It goes around the verb like a sandwich."},
-    {"french": "perceuses", "drills":"lose", "tip":"A good way to remember this: drills make a 'piercing' (perc-ing) noise!"},
+    {"french": "perceuses", "english":"drills", "tip":"A good way to remember this: drills make a 'piercing' (perc-ing) noise!"},
     {"french": "perdre", "english":"lose", "tip":""},
     {"french": "petit", "english":"little", "tip":"'Petit' precedes a masculine noun (or person, such as Dudley) and 'petite' a feminine noun or person."},
     {"french": "plus grande", "english":"highest", "tip":"Literally, 'most big'"},
