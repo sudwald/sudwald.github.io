@@ -92,7 +92,14 @@ let frenchDictionary = [
 if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
     document.getElementById('hoverorclick').innerHTML = "Click on any word to get started";
     document.getElementById('popup').style.width = "70%";
+    document.getElementById('header').style.height = "30em";
+    document.getElementById('h1').style.fontSize = "7em";
     document.getElementById('popup').style.fontSize = "3em";
+    document.getElementById('frenchText').style.fontSize = "3em"
+    let h2Array = document.getElementsByTagName('h2')
+    for (let i=0; i<h2Array.length; i++) {
+        h2Array[i].style.fontSize = "3em"
+    }
 }
 
 //whenever a defined <span> is hovered over it should invoke translateWord() and pass it the word/phrase being hovered over
