@@ -89,8 +89,12 @@ let frenchDictionary = [
 ]
 
 //instruct user to click not hover if on mobile
-if (window.screen.width < 844) {
-    document.getElementById('hoverorclick').innerHTML === "Click on any word to get started"
+if (window.innerWidth < 844) {
+    alert("it is less")
+    document.getElementById('hoverorclick').innerHTML = "Click on any word to get started"
+}
+else {
+    alert(window.innerWidth)
 }
 
 //whenever a defined <span> is hovered over it should invoke translateWord() and pass it the word/phrase being hovered over
