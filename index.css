@@ -1,0 +1,37 @@
+body {
+    font-family: 'Arvo';
+    text-align: center;
+}
+
+img {
+    width:500px;
+    margin-top:10px;
+}
+
+p {
+    font-size:24px;
+}
+
+a {
+    font-size:24px;
+    margin-bottom:10px;
+    font-weight:bolder;
+    color:cornflowerblue;
+}
+
+.portfolioContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:30px;
+    text-align: center;
+    width:100%;
+    justify-items: center;
+}
+
+.portfolioExample{
+    display:flex;
+    flex-flow: column;
+    width:520px;
+    border: 1px solid black;
+    padding:10px;
+}
