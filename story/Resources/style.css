@@ -1,0 +1,291 @@
+:root {
+    font-family: 'Source Code Pro';
+    font-size:1.5vw;
+    text-align: center;
+    letter-spacing:-1px;
+}
+
+body {
+    background-image: url('./bg5.png');
+    background-size: 100%;
+    z-index:1;
+}
+
+/* THE OUTER FORM BORDER */
+#VBform {
+    width:75%;
+    height:80vh;
+    background-color: #b6d3ec;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5);
+    border-radius: 1%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 15fr;
+    justify-items: center;
+    align-items:flex-end;
+    padding-bottom:0.5rem;
+    margin-left: 8%;
+    margin-top:7.5%;
+}
+
+/* THE CONTAINER FOR THE FORM HEADER */
+#VBheaderContainer{
+    width:100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom:0.1rem;
+}
+
+/* CONTAINS 'File1' AND ASSOCIATED IMAGE */
+#VBheader{
+    width:100%;
+    height:15px;
+    display:inline-flex;
+    justify-content:flex-start;
+    align-content:center;
+    padding-top:0.1rem;
+}
+
+/* THE ICON NEXT TO 'File1' */
+#VBheader img {
+    width:1rem;
+    height:1rem;
+    padding-left:0.75rem;
+}
+
+/* THE 'File1' TEXT */
+#VBheader p {
+    margin-top:0;
+    padding-left: 0.3rem;
+    padding-top:0.15rem;
+    font-family: 'Microsoft Sans Serif';
+    font-size:0.8rem;
+}
+
+/* THE CONTAINER FOR THE WINDOW ICONS IN THE HEADER */
+#windowIconsDiv {
+    display:inline-flex;
+    justify-content:flex-end;
+    align-content:center;
+}
+
+/* THE WINDOW ICONS IMAGE  */
+#windowIcons {
+    height:1.2rem;
+    width:auto;
+    padding-right:0.6rem;
+}
+
+/* THE LARGE DOTTED AREA THAT MAKES UP THE MAIN FORM SPACE */
+#innerVBform {
+    width:98.5%;
+    height:100%;
+    background-color: #fff;
+    background-image: radial-gradient(circle, #000000 1%, transparent 10%), radial-gradient(circle, #000000 1%, transparent 10%);
+    background-size: 10px 10px;
+    border:1px solid powderblue;
+    background-position: 0 0, 50px 50px;
+    display:grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 10vh 1fr;
+    column-gap: 1rem;
+    grid-template-areas: "header header" "photos story";
+    justify-items: center;
+    align-items: center;
+    font-size:1.3rem;
+    overflow: hidden;
+}
+
+#storyHeader{
+    grid-area: header;
+}
+
+/* TEXT WHICH IS WRITTEN WITH A 'TYPEWRITER' EFFECT ON LAUNCH */
+#storyText1 {
+    width:42rem;
+    font-size:1.5rem;
+    border-right: solid 3px rgba(0, 255, 0, 0.75);
+    overflow: hidden;
+    opacity:1;
+    white-space: nowrap;
+    letter-spacing: -1px;
+    animation:  animated-text 2s steps(50,end) 1,
+                animated-cursor 600ms steps(50, end) infinite,
+                fadeOut 1s normal 35s 1 forwards;
+}
+
+/* STORYTEXT1 TYPEWRITER TEXT ANIMATION */
+@keyframes animated-text{
+    from{width:0;}
+    to{width: 42rem;}
+}
+
+/* STORYTEXT1 CURSOR ANIMATION */
+@keyframes animated-cursor{
+    from{border-right-color: rgba(0, 255, 0, 0.75);}
+    to{border-right-color: transparent;}
+}
+
+/* CONTAINER OF THE IMAGES WHICH ACCOMPANY THE STORY */
+#storyPhotosDiv{ 
+    grid-area: photos;
+    position:absolute;
+    margin-top: 12vh;
+    margin-left:7vh;
+    height:65vh;
+    width:35vw;
+    overflow:hidden;
+    padding-left:1.3rem;
+    padding-right:1.3rem;
+    animation: imgScroll7 1s ease-in 34s forwards;
+}
+
+/* SETS SHARED IMAGE PROPERTIES OF THE IMAGES WHICH ACCOMPANY THE STORY */
+#storyPhotosDiv img {
+    width:22vw;
+}
+
+#storyPhotos {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    animation:  imgScroll1 1s ease forwards,
+                imgScroll2 1s ease-in 7s forwards,
+                imgScroll3 1s ease-in 11s forwards,
+                imgScroll4 1s ease-in 16s forwards,
+                imgScroll5 1s ease-in 21s forwards,
+                imgScroll6 2s ease-in 34s forwards;
+}
+
+#storyImage2{
+    padding: 6.1vh 0;
+}
+
+#storyImage3{
+    padding-top: 15vh;
+    padding-bottom:15vh;
+}
+
+#storyImage4{
+    padding-top: 10.6vh;
+    padding-bottom: 10.6vh;
+}
+
+#storyImage5{
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+}
+
+#storyImage6{
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+}
+
+/* ANIMATION WHICH MAKES A PHOTO MOVE INTO VIEW */
+@keyframes imgScroll1 {
+    0% {padding-top: 65vh;}
+    100% {padding-top: 0vh;}
+}
+
+@keyframes imgScroll2 {
+    0% {padding-top: 0vh;}
+    100% {margin-top: -65vh;}
+}
+
+@keyframes imgScroll3 {
+    0% {margin-top: -65vh;}
+    100% {margin-top: -130vh;}
+}
+
+@keyframes imgScroll4 {
+    0% {margin-top: -130vh;}
+    100% {margin-top: -195vh;}
+}
+
+@keyframes imgScroll5 {
+    0% {margin-top: -195vh;}
+    100% {margin-top: -260vh;}
+}
+
+@keyframes imgScroll6 {
+    0% {margin-top: -200vh;}
+    100% {margin-top: 0vh;}
+}
+
+@keyframes imgScroll7 {
+    0% {margin-top: 12vh;}
+    100% {margin-top: 8vh;}
+}
+
+/* DIV WHICH CONTAINS THE BULLET POINTS OF THE STORY */
+
+#storyBulletsDiv {
+    grid-area: story;
+    font-size:1.3vw;
+    text-align: left;
+    animation: storyScroll 2s normal 34s forwards;
+    margin-right:2rem;
+}
+
+@keyframes storyScroll {
+    0% {padding-top: 0vh;}
+    100% {margin-top: -105vh;}
+}
+
+#storyBullet1 {
+    opacity: 0;
+    animation:  fadeIn 2s normal 4s 1 forwards;
+}
+
+#storyBullet2 {
+    opacity: 0;
+    animation:  fadeIn 2s normal 7s 1 forwards;
+}
+
+#storyBullet3 {
+    opacity: 0;
+    animation:  fadeIn 2s normal 11s 1 forwards;
+}
+
+#storyBullet4 {
+    opacity: 0;
+    animation:  fadeIn 2s normal 16s 1 forwards;
+}
+
+#storyBullet5 {
+    opacity: 0;
+    animation:  fadeIn 2s normal 21s 1 forwards;
+}
+
+#storyBullet6 {
+    opacity: 0;
+    animation:  fadeIn 2s normal 26s 1 forwards;
+}
+
+#storyBullet7 {
+    opacity: 0;
+    animation:  fadeIn 2s normal 31s 1 forwards;
+}
+
+/* ANIMATION WHICH MAKES STORY BULLET POINT APPEAR */
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* ANIMATION WHICH MAKES STORY BULLET POINT APPEAR */
+@keyframes fadeOut{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.fullStory{
+    opacity:0;
+    font-size: 1.2vw;
+    animation: fadeIn 2s normal 35s 1 forwards;
+    text-align: justify;
+}
+
+#fullStory1 {
+    padding-top:40vh;
+}
