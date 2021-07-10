@@ -3,28 +3,36 @@
     font-size:1.5vw;
     text-align: center;
     letter-spacing:-1px;
+    overflow-y: hidden;
+    overflow-x:hidden;
 }
 
-body {
+#bodyContainer {
+    position:fixed;
+    top:0;
+    left: 0;
+    margin: 0;
+    min-height:100vh;
+    min-width:100vw;
     background-image: url('./bg5.png');
-    background-size: 100%;
+    background-size:100% 100%;
     z-index:1;
 }
 
 /* THE OUTER FORM BORDER */
 #VBform {
     width:75%;
-    height:80vh;
+    height:80%;
     background-color: #b6d3ec;
     box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5);
     border-radius: 1%;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 15fr;
+    grid-template-rows: 1.5rem 1fr;
     justify-items: center;
     align-items:flex-end;
     padding-bottom:0.5rem;
-    margin-left: 8%;
+    margin-left:8%;
     margin-top:7.5%;
 }
 
@@ -39,7 +47,7 @@ body {
 /* CONTAINS 'File1' AND ASSOCIATED IMAGE */
 #VBheader{
     width:100%;
-    height:15px;
+    height:1.2rem;
     display:inline-flex;
     justify-content:flex-start;
     align-content:center;
@@ -80,17 +88,17 @@ body {
 #innerVBform {
     width:98.5%;
     height:100%;
-    background-color: #fff;
+    background-color: #FFF;
     background-image: radial-gradient(circle, #000000 1%, transparent 10%), radial-gradient(circle, #000000 1%, transparent 10%);
     background-size: 10px 10px;
     border:1px solid powderblue;
     background-position: 0 0, 50px 50px;
     display:grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 10vh 1fr;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 2.5rem 1fr;
     column-gap: 1rem;
     grid-template-areas: "header header" "photos story";
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     font-size:1.3rem;
     overflow: hidden;
@@ -107,6 +115,7 @@ body {
     border-right: solid 3px rgba(0, 255, 0, 0.75);
     overflow: hidden;
     opacity:1;
+    margin: 0 auto;
     white-space: nowrap;
     letter-spacing: -1px;
     animation:  animated-text 2s steps(50,end) 1,
@@ -129,15 +138,10 @@ body {
 /* CONTAINER OF THE IMAGES WHICH ACCOMPANY THE STORY */
 #storyPhotosDiv{ 
     grid-area: photos;
-    position:absolute;
-    margin-top: 12vh;
-    margin-left:4vh;
     height:65vh;
-    width:35vw;
+    width:75%;
     overflow:hidden;
-    padding-left:1.3rem;
-    padding-right:1.3rem;
-    animation: imgScroll7 1s ease-in 34s forwards;
+    margin:0 auto;
 }
 
 /* SETS SHARED IMAGE PROPERTIES OF THE IMAGES WHICH ACCOMPANY THE STORY */
@@ -145,91 +149,80 @@ body {
     width:22vw;
 }
 
-#storyPhotos {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr;
-    animation:  imgScroll1 1s ease forwards,
-                imgScroll2 1s ease-in 7s forwards,
-                imgScroll3 1s ease-in 11s forwards,
-                imgScroll4 1s ease-in 16s forwards,
-                imgScroll5 1s ease-in 21s forwards,
-                imgScroll6 2s ease-in 34s forwards;
+.storyPhotos {
+    position:absolute;
+    overflow:hidden;
+    height:0;
+    justify-self: center;
 }
 
-#storyImage2{
-    padding: 6.1vh 0;
+#storyPhotos1 {
+    animation:  imgScroll 2s normal forwards,
+                imgScroll 1s reverse 6s forwards,
+                imgScroll 1s normal 37s forwards;
 }
 
-#storyImage3{
-    padding-top: 15vh;
-    padding-bottom:15vh;
+#storyPhotos2 {
+    padding-top: 2%;
+    animation:  imgScroll 2s normal 7s forwards,
+                imgScroll 1s reverse 10s forwards;
 }
 
-#storyImage4{
-    padding-top: 10.6vh;
-    padding-bottom: 10.6vh;
+#storyPhotos3 {
+    padding-top:6%;
+    animation:  imgScroll 2s normal 11s forwards,
+                imgScroll 1s reverse 15s forwards;
 }
 
-#storyImage5{
-    padding-top: 3vh;
-    padding-bottom: 2vh;
+#storyPhotos4 {
+    padding-top:5%;
+    animation:  imgScroll 2s normal 16s forwards,
+                imgScroll 1s reverse 20s forwards;
 }
 
-#storyImage6{
-    padding-top: 2vh;
-    padding-bottom: 3vh;
+#storyPhotos5 {
+    padding-top:1%;
+    animation:  imgScroll 2s normal 21s forwards,
+                imgScroll 1s reverse 33s forwards;
 }
 
 /* ANIMATION WHICH MAKES A PHOTO MOVE INTO VIEW */
-@keyframes imgScroll1 {
-    0% {padding-top: 65vh;}
-    100% {padding-top: 0vh;}
+@keyframes imgScroll {
+    0% {height:0;}
+    100% {height:65vh;}
 }
 
-@keyframes imgScroll2 {
-    0% {padding-top: 0vh;}
-    100% {margin-top: -65vh;}
-}
-
-@keyframes imgScroll3 {
-    0% {margin-top: -65vh;}
-    100% {margin-top: -130vh;}
-}
-
-@keyframes imgScroll4 {
-    0% {margin-top: -130vh;}
-    100% {margin-top: -195vh;}
-}
-
-@keyframes imgScroll5 {
-    0% {margin-top: -195vh;}
-    100% {margin-top: -260vh;}
-}
-
-@keyframes imgScroll6 {
-    0% {margin-top: -200vh;}
-    100% {margin-top: 0vh;}
-}
-
-@keyframes imgScroll7 {
-    0% {margin-top: 12vh;}
-    100% {margin-top: 8vh;}
+@keyframes storyScroll {
+    0% {height:0%;}
+    100% {height:100%;}
 }
 
 /* DIV WHICH CONTAINS THE BULLET POINTS OF THE STORY */
 
 #storyBulletsDiv {
+    position: relative;
+    height:100%;
+    width:100%;
     grid-area: story;
     font-size:1.3vw;
     text-align: left;
-    animation: storyScroll 2s normal 34s forwards;
-    margin-right:2rem;
 }
 
-@keyframes storyScroll {
-    0% {padding-top: 0vh;}
-    100% {margin-top: -104vh;}
+#storyBullets {
+    height:100%;
+    width:100%;
+    position:absolute;
+    animation: fadeOut 1s normal 36s forwards;
+}
+
+#fullStoryDiv {
+    height:100%;
+    width:95%;
+    position:absolute;
+    opacity:0;
+    animation: fadeIn 1s normal 37s forwards;
+    font-size: 1.2vw;
+    text-align: justify;
 }
 
 #storyBullet1 {
@@ -279,17 +272,6 @@ body {
     100% {opacity: 0;}
 }
 
-.fullStory{
-    opacity:0;
-    font-size: 1.2vw;
-    animation: fadeIn 2s normal 35s 1 forwards;
-    text-align: justify;
-}
-
-#fullStory1 {
-    padding-top:40vh;
-}
-
 #info {
     position:absolute;
     top:15vh;
@@ -300,4 +282,74 @@ body {
     font-size:0.78rem;
     font-weight:bold;
     color:#406ca4;
+}
+
+@media only screen and (orientation:portrait) {
+    #bodyContainer{
+        background-image: url('./bgmobile.png');
+        background-size: 100% 100%;
+    }
+    #VBform{
+        min-height: 25vh;
+        max-height: 25vh;
+        width:65vw;
+        margin-left:12%;
+        margin-top:7%;
+    }
+    #storyPhotosDiv {
+        height:20vh;
+        margin:12.5% auto;
+    }
+    .storyBullet{
+        display:flex;
+        margin:0;
+        align-items: center;
+        position:absolute;
+        text-align:center;
+        font-size:1.5rem;
+        height:20vh;
+        font-weight: bolder;
+    }
+    #storyText1 {
+        font-weight: bold;
+    }
+    #storyBullet1{
+        animation:  fadeIn 2s normal 3s 1 forwards,
+                    fadeOut 2s normal 6s 1 forwards;
+    }   
+    
+    #storyBullet2 {
+        opacity: 0;
+        animation:  fadeIn 2s normal 6s 1 forwards,
+                    fadeOut 2s normal 10s 1 forwards;
+    }
+
+    #storyBullet3 {
+        opacity: 0;
+        animation:  fadeIn 2s normal 10s 1 forwards,
+                    fadeOut 2s normal 15s 1 forwards;
+    }
+
+    #storyBullet4 {
+        opacity: 0;
+        animation:  fadeIn 2s normal 15s 1 forwards,
+                    fadeOut 2s normal 20s 1 forwards;   
+    }
+    #storyBullet5 {
+        opacity: 0;
+        animation:  fadeIn 2s normal 20s 1 forwards,
+                    fadeOut 2s normal 25s 1 forwards;
+    }
+    #storyBullet6 {
+        opacity: 0;
+        animation:  fadeIn 2s normal 25s 1 forwards,
+                    fadeOut 2s normal 30s 1 forwards;
+    }
+    #info {
+        position:absolute;
+        top:4.5vh;
+        left:81vw;
+        width:17vw;
+        font-size:1.1rem;
+    }
 }

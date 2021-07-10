@@ -71,7 +71,7 @@ main {
 #frenchText {
     font-size:1.25em;
     font-weight:bolder;
-    word: spacing 0.5em;;
+    word-spacing: 0.5em;
     line-height: 3em;
     width:90%;
     margin:0 auto;
@@ -105,4 +105,16 @@ footer {
     text-align:left;
     padding-left:10px;
     border: 1px solid black;
+}
+
+@media only screen and (max-width: 950px) {
+    h1{
+    font-size:4.5em;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    h1{
+    font-size:3.5em;
+    }
 }

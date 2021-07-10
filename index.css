@@ -11,7 +11,7 @@ h1{
 }
 
 img {
-    width:370px;
+    width:100%;
     margin-top:10px;
 }
 
@@ -20,10 +20,9 @@ p {
 }
 
 #welcome {
-    width:80%;
     margin: 0 auto;
-    text-align: center;
-    padding-bottom: 20px;
+    text-align: justify;
+    padding:30px;
 }
 
 a {
@@ -46,9 +45,8 @@ a {
 .portfolioExample{
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 35px 1fr;
     justify-items: center;
-    width:380px;
+    width:auto;
     border: 1px solid black;
     padding:10px;
     cursor:pointer;
@@ -81,8 +79,20 @@ a {
     }
 }
 
-@media only screen and (max-device-width : 375px) and (-webkit-device-pixel-ratio : 3) {
+@media only screen and (max-device-width : 480px) and (-webkit-device-pixel-ratio : 3) {
     .portfolioContainer{
         grid-template-columns: 1fr;
-  }
+    }
+    h1 {
+        font-size:100px;
+    }
+    p {
+        font-size:16px;
+    }
+    .portfolioExample{
+        width:90%;
+    }
+    img {
+        width:89%;
+    }
 }
