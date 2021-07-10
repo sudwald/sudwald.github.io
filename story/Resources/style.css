@@ -274,7 +274,7 @@
 
 #info {
     position:absolute;
-    top:15vh;
+    top:19vh;
     left:86.7vw;
     width:12vw;
     text-align: justify;
@@ -366,5 +366,26 @@
         left: 25%;
         top:35%;
         font-size: 36px;
+    }
+}
+
+@media only screen and (max-device-height:500px) {
+    #fullStoryDiv {
+        font-size: 1.1vw;
+    }
+    #info {
+        position:absolute;
+        top:20vh;
+    }
+    #storyText1 {
+        font-size:1.4rem;   
+        width:38.5rem;
+    }
+    @keyframes animated-text{
+    from{width:0;}
+    to{width: 38.5rem;}
+    }
+    #storyPhotosDiv {
+        padding-bottom:10px;
     }
 }
