@@ -80,3 +80,9 @@ a {
     font-size:36px;
     }
 }
+
+@media only screen and (max-device-width : 375px) and (-webkit-device-pixel-ratio : 3) {
+    .portfolioContainer{
+        grid-template-columns: 1fr;
+  }
+}
