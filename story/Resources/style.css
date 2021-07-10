@@ -371,10 +371,10 @@
 
 @media only screen and (max-device-height:3000px) {
     #fullStoryDiv {
-        font-size: 0.7rem;
+        font-size: 14px;
     }
     .storyBullet {
-        font-size: 0.7rem;
+        font-size: 14px;
     }
     #info {
         position:absolute;
