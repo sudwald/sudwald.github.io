@@ -284,6 +284,10 @@
     color:#406ca4;
 }
 
+#landscapePrompt {
+    opacity:0;
+}
+
 @media only screen and (orientation:portrait) {
     #bodyContainer{
         background-image: url('./bgmobile.png');
@@ -351,5 +355,16 @@
         left:81vw;
         width:17vw;
         font-size:1.1rem;
+    }
+    #landscapePrompt {
+        opacity:1;
+        position:absolute;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5%;
+        width:50%;
+        left: 25%;
+        top:35%;
+        font-size: 36px;
     }
 }
