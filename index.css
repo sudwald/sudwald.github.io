@@ -1,37 +1,82 @@
 body {
-    font-family: 'Arvo';
+    font-family: 'Open Sans';
     text-align: center;
+    background-image: linear-gradient(to right, #d3959b, #bfe6ba);
+}
+
+h1{
+    font-family: "Permanent Marker";
+    font-size:48px;
+    margin:10px 0;
 }
 
 img {
-    width:500px;
+    width:370px;
     margin-top:10px;
 }
 
 p {
-    font-size:24px;
+    font-size:18px;
+}
+
+#welcome {
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 a {
     font-size:24px;
     margin-bottom:10px;
     font-weight:bolder;
-    color:cornflowerblue;
+    color:black;
 }
 
 .portfolioContainer{
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
     text-align: center;
     width:100%;
     justify-items: center;
+    margin: 0 auto;
 }
 
 .portfolioExample{
-    display:flex;
-    flex-flow: column;
-    width:520px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35px 1fr;
+    justify-items: center;
+    width:380px;
     border: 1px solid black;
     padding:10px;
+    cursor:pointer;
+    background-color: white;
+    ;
+}
+
+.portfolioExample:hover {
+    box-shadow: 10px 10px 50px 10px #d2dbd1 inset;
+    animation: 500ms boxhover forwards;
+}
+
+@keyframes boxhover {
+    from {border: 1px black solid;}
+    to {border: 2px black solid;}
+}
+
+@media only screen and (max-width: 1247px) {
+    .portfolioContainer{
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 827px) {
+    .portfolioContainer{
+        grid-template-columns: 1fr;
+    }
+    h1{
+    font-size:36px;
+    }
 }
