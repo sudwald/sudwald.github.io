@@ -369,13 +369,16 @@
     }
 }
 
-@media only screen and (max-device-height:500px) {
+@media only screen and (max-device-height:3000px) {
     #fullStoryDiv {
-        font-size: 1.1vw;
+        font-size: 0.7rem;
+    }
+    .storyBullet {
+        font-size: 0.7rem;
     }
     #info {
         position:absolute;
-        top:20vh;
+        top:22vh;
     }
     #storyText1 {
         font-size:1.4rem;   
