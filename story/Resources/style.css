@@ -183,6 +183,12 @@
 #storyPhotos5 {
     padding-top:1%;
     animation:  imgScroll 2s normal 21s forwards,
+                imgScroll 1s reverse 25s forwards;
+}
+
+#storyPhotos6 {
+    padding-top:8%;
+    animation:  imgScroll 2s normal 26s forwards,
                 imgScroll 1s reverse 36s forwards;
 }
 
@@ -362,10 +368,15 @@
         background-color: white;
         border: 1px solid black;
         border-radius: 5%;
-        width:50%;
-        left: 25%;
-        top:35%;
+        width:85%;
+        left:7%;
+        top:30%;
         font-size: 36px;
+    }
+
+    #landscapePrompt img{
+        width:100%;
+        height:auto;
     }
 }
 
