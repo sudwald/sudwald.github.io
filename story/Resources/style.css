@@ -374,7 +374,7 @@
         font-size: 9px;
     }
     .storyBullet {
-        font-size: 12px;
+        font-size: 11px;
         margin:0 0;
         padding: 0.25rem 0;
         background-color: hotpink;
@@ -384,7 +384,7 @@
         top:22vh;
     }
     #storyText1 {
-        font-size:16.5px;   
+        font-size:14px;   
         width:38.5rem;
     }
     @keyframes animated-text{
@@ -394,4 +394,9 @@
     #storyPhotosDiv {
         padding-bottom:10px;
     }
+    #innerVBform{ 
+        background-size: 5px 5px;
+        border:1px solid powderblue;
+        background-position: 0 0, 50px 50px;   
+        }
 }
