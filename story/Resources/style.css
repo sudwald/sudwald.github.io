@@ -369,7 +369,7 @@
     }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 800px) {
+@media only screen and (min-width: 300px) and (max-width: 800px) and (orientation:landscape) {
     #fullStoryDiv {
         font-size: 9px;
     }
@@ -377,6 +377,7 @@
         font-size: 12px;
         margin:0 0;
         padding: 0.25rem 0;
+        background-color: hotpink;
     }
     #info {
         position:absolute;
