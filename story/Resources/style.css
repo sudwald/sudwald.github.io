@@ -120,7 +120,7 @@
     letter-spacing: -1px;
     animation:  animated-text 2s steps(50,end) 1,
                 animated-cursor 600ms steps(50, end) infinite,
-                fadeOut 1s normal 35s 1 forwards;
+                fadeOut 1s normal 36s 1 forwards;
 }
 
 /* STORYTEXT1 TYPEWRITER TEXT ANIMATION */
@@ -183,7 +183,7 @@
 #storyPhotos5 {
     padding-top:1%;
     animation:  imgScroll 2s normal 21s forwards,
-                imgScroll 1s reverse 33s forwards;
+                imgScroll 1s reverse 36s forwards;
 }
 
 /* ANIMATION WHICH MAKES A PHOTO MOVE INTO VIEW */
@@ -369,19 +369,21 @@
     }
 }
 
-@media only screen and (max-device-height:3000px) {
+@media only screen and (min-width: 300px) and (max-width: 800px) {
     #fullStoryDiv {
-        font-size: 14px;
+        font-size: 9px;
     }
     .storyBullet {
-        font-size: 14px;
+        font-size: 12px;
+        margin:0 0;
+        padding: 0.25rem 0;
     }
     #info {
         position:absolute;
         top:22vh;
     }
     #storyText1 {
-        font-size:1.4rem;   
+        font-size:16.5px;   
         width:38.5rem;
     }
     @keyframes animated-text{
