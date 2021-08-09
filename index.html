@@ -7,28 +7,57 @@
     <link href='./index.css' rel='stylesheet' type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Permanent+Marker&family=Arvo&family=Ubuntu&family=Yomogi&family=Zen+Loop&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Open+Sans&family=Permanent+Marker&family=Arvo&family=Ubuntu&family=Yomogi&family=Zen+Loop&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Sammy's Portfolio</h1>
-    <p id='welcome'>I am following a full-stack development course and am implementing what I am learning in some independent projects here. Feel free to explore below!</p>
-    <div class='portfolioContainer'>
-        <div class='portfolioExample' onclick="location.href='./readfrench/index.html';">
-            <a href="./readfrench/index.html">Read French</a>
-            A vanilla JS/HTML/CSS interface allowing a user to read French text by hovering over words for translation and context.
-            <img src='./resources/readfrench.png' alt='screenshot of the Read French project'/>
+    <header>
+        <div id='headerbg'></div>
+            <h1>Sammy's Portfolio</h1>
+    </header>
+    <div class='container'>
+        <div class='box' id='box1'>I have been studying front-end development for approx. 200 hours since May 2021</div>
+
+        <a href='./story/index.html'>
+        <div class='box' id='box2'>
+            <h2>What?</h2>
+            <p>The predictable tale of how I didn't go into STEM</p>
+            <h2>Showcases:</h2>
+            <p>Pure CSS, animated CSS</p>
         </div>
-        <div class='portfolioExample' onclick="location.href='./bookcollage';">
-            <a href='./bookcollage'>Book Collage Maker</a>
-            A React app using Google Books API to allow a user to create and customise a collage of book covers.
-            <img src='./resources/bookcollage.png' alt='screenshot of the Book Collage project'/>
+        </a>
+
+        <div class='box' id='box3'>With a focus on HTML, CSS, JS, React, and Redux, as well as Git, APIs, web deployment, developer tools, and testing.</div>
+
+        <a href='./readfrench/index.html'>
+        <div class='box' id='box4'>
+            <h2>What?</h2>
+            <p>An interface to allow a user to read French by hovering over words and phrases for an instant translation</p>
+            <h2>Showcases:</h2>
+            <p>HTML, CSS, vanilla JS</p>
         </div>
-        <div class='portfolioExample' onclick="location.href='./story/index.html';">
-            <a href='./story/index.html'>My Story</a>
-            A little background on me in the form of an animated CSS / "no JS" project.
-            <img src='./resources/mystory.png' alt='screenshot of the My Story project'/>
+        </a>
+
+        <a href='./bookcollage'>
+        <div class='box' id='box5'>
+            <h2>What?</h2>
+            <p>An interface which uses Google Books API to allow a user to make a collage of book covers</p>
+            <h2>Showcases:</h2>
+            <p>React, API use</p>
         </div>
+        </a>
+
+        <div class='box' id='box6'>All of my projects are also fully responsive.</div>
+
+        <a href='./clock'>
+        <div class='box' id='box7'>
+            <h2>What?</h2>
+            <p>A solitaire card game</p>
+            <h2>Showcases:</h2>
+            <p>React-Redux, Redux Toolkit</p>
+        </div>
+        </a>
+
+        <div class='box' id='box8'>I will shortly be diving into the mysterious world of back-end! In the meantime, please enjoy my portfolio :)</div>
     </div>
-    
 </body>
 </html>

@@ -1,0 +1,98 @@
+body {
+    font-family: 'Open Sans';
+    text-align: center;
+    background-image: linear-gradient(to right, #d3959b, #bfe6ba);
+}
+
+h1{
+    font-family: "Permanent Marker";
+    font-size:48px;
+    margin:10px 0;
+}
+
+img {
+    width:100%;
+    margin-top:10px;
+}
+
+p {
+    font-size:18px;
+}
+
+#welcome {
+    margin: 0 auto;
+    text-align: justify;
+    padding:30px;
+}
+
+a {
+    font-size:24px;
+    margin-bottom:10px;
+    font-weight:bolder;
+    color:black;
+}
+
+.portfolioContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
+    text-align: center;
+    width:100%;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.portfolioExample{
+    display:grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width:auto;
+    border: 1px solid black;
+    padding:10px;
+    cursor:pointer;
+    background-color: white;
+    ;
+}
+
+.portfolioExample:hover {
+    box-shadow: 10px 10px 50px 10px #d2dbd1 inset;
+    animation: 500ms boxhover forwards;
+}
+
+@keyframes boxhover {
+    from {border: 1px black solid;}
+    to {border: 2px black solid;}
+}
+
+@media only screen and (max-width: 1247px) {
+    .portfolioContainer{
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 827px) {
+    .portfolioContainer{
+        grid-template-columns: 1fr;
+    }
+    h1{
+    font-size:36px;
+    }
+}
+
+@media only screen and (max-device-width : 480px) and (-webkit-device-pixel-ratio : 3) {
+    .portfolioContainer{
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size:100px;
+    }
+    p {
+        font-size:16px;
+    }
+    .portfolioExample{
+        width:90%;
+    }
+    img {
+        width:89%;
+    }
+}
