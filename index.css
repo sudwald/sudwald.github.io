@@ -147,6 +147,7 @@ h2 {
         padding:1% 3%;
         width:90vw;
         text-align: center;
+        font-size:10px;
     }
     #box2, #box4, #box5, #box7 {
         min-height:45vh;
