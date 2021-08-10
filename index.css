@@ -1,20 +1,19 @@
 body {
     text-align: center;
-    padding: 0 1%;
     font-family: 'Quicksand';
 }
 
 header {
-    height:10vh;
+    height:20vh;
     margin-bottom:1%;
 }
 
 #headerbg {
     position:relative;
-    height:10vh;
+    height:17vh;
     background-image: url(./resources/codebg2.PNG);
     background-size:cover;
-    filter: blur(5px);
+    filter: blur(4.5px);
     background-position: 3%;
     z-index: 1;
 }
@@ -24,13 +23,21 @@ h1 {
     top:0;
     left:10%;
     margin: 0;
+    padding:0;
     font-size: 48px;
     z-index:3;
     width:80%;
-    letter-spacing: 15px;
+    letter-spacing: 8px;
+    line-height: 18vh;
+    font-family: 'Permanent Marker';
 }
 
-a {
+h2 {
+    padding:0;
+    margin:0;   
+}
+
+.boxLink {
     color: black;
     text-decoration: none;
 }
@@ -38,7 +45,7 @@ a {
 .container {
     display: grid;
     grid-template-columns: repeat(4, 46.35vh);
-    grid-template-rows: 40vh 40vh;
+    grid-template-rows: 36vh 36vh;
     gap: 2% 1%;
 }
 
@@ -47,7 +54,7 @@ a {
     box-shadow: 5px 5px 8px 1px lightsteelblue;
     overflow: hidden;
     padding: 5%;
-    height: 36vh;
+    height: 32vh;
     width: 41.715vh;
 }
 
@@ -60,7 +67,7 @@ a {
 }
 
 #box2::after, #box4::after, #box5::after, #box7::after {
-    font-size: 38px;
+    font-size: 28px;
     display:flexbox;
     line-height:60vh;
     position:absolute;
@@ -108,4 +115,94 @@ a {
 .firstChar {
     font-size:36px;
     font-family: 'Permanent Marker';
+}
+
+/* MEDIA QUERY FOR LANDSCAPE MOBILE */
+@media screen and (orientation:landscape) and (max-width: 992px) {
+    h1{
+        padding-top:2%;
+        font-size: 30px;
+        line-height: 8vh;
+    }
+    h2 {
+        margin-left:40vw;
+        font-size:16px;
+    }
+    header {
+        height:15vh;
+    }
+    #headerbg {
+        height:15vh;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        gap:1%;
+        grid-template-rows: repeat(4,auto);
+    }
+    .box {
+        width:90%;
+    }
+    #box1, #box3, #box6, #box8 {
+        height:auto; 
+        padding:1% 3%;
+        width:90vw;
+        text-align: center;
+    }
+    #box2, #box4, #box5, #box7 {
+        min-height:45vh;
+        width:86vw;
+    }
+    #box7 {
+        margin-bottom:5%;
+    }
+    #box2 p, #box4 p, #box5 p, #box7 p {
+        margin-left: 40vw;
+        font-size:14px;
+    }
+    #box2::after, #box4::after, #box5::after, #box7::after {
+        height:70%;
+        width:45%;
+        line-height:100vh;
+        transform:rotate(12deg);
+        background-color: white;
+    }
+}
+
+/* MEDIA QUERY FOR PORTRAIT MOBILE */
+@media screen and (max-width: 500px) {
+    h1{
+        padding-top:2%;
+        font-size: 20px;
+        line-height: 7vh;
+    }
+    header {
+        height:15vh;
+    }
+    #headerbg {
+        height:15vh;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        gap:1%;
+        grid-template-rows: repeat(8,auto);
+    }
+    .box {
+        width:90%;
+    }
+    #box1, #box3, #box6, #box8 {
+        height:auto; 
+        padding:1% 3%;
+        width:90vw;
+    }
+    #box2, #box4, #box5, #box7 {
+        padding-top:42vh;
+        height:34vh;
+        width:84vw;
+    }
+    #box2::after, #box4::after, #box5::after, #box7::after {
+        height:51%;
+        width:110%;
+        line-height:66vh;
+        transform:rotate(12deg);
+    }
 }
