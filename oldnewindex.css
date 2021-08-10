@@ -58,31 +58,12 @@ h2 {
     width: 41.715vh;
 }
 
-#mobBox {
-    display: none;
-}
-
-#box8::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  #box8::-webkit-scrollbar-track {
-    background: aliceblue;        /* color of the tracking area */
-  }
-
-    #box8::-webkit-scrollbar-thumb {
-        background-color: lightblue;    /* color of the scroll thumb */
-        border-radius: 20px;       /* roundness of the scroll thumb */
-        border: 3px solid lightblue;  /* creates padding around scroll thumb */
-      }
-
-#box8 {
-    font-size: 12px;
+#box1, #box3, #box6, #box8 {
+    font-size: 16px;
+    font-weight:bold;
     letter-spacing:1px;
     text-align:justify;
     box-shadow: none;
-    overflow: auto;
-    display:inline;
 }
 
 #box2::after, #box4::after, #box5::after, #box7::after {
@@ -161,18 +142,12 @@ h2 {
     .box {
         width:90%;
     }
-    #mobBox {
-        display: inline;
-        height:40vh; 
+    #box1, #box3, #box6, #box8 {
+        height:auto; 
         padding:1% 3%;
         width:90vw;
         text-align: center;
-        overflow: auto;
-        font-size: 12px;
-        box-shadow: none;
-    }
-    #box8{
-        display: none;
+        font-size:10px;
     }
     #box2, #box4, #box5, #box7 {
         min-height:45vh;
@@ -199,15 +174,13 @@ h2 {
     h1{
         padding-top:2%;
         font-size: 20px;
-        line-height: 11vh;
-        letter-spacing: 4px;
+        line-height: 7vh;
     }
     header {
-        height:10vh;
-        margin-bottom:4%;
+        height:15vh;
     }
     #headerbg {
-        height:10vh;
+        height:15vh;
     }
     .container{
         grid-template-columns: 1fr;
@@ -217,18 +190,10 @@ h2 {
     .box {
         width:90%;
     }
-    #mobBox {
-        height:60vh; 
+    #box1, #box3, #box6, #box8 {
+        height:auto; 
         padding:1% 3%;
         width:90vw;
-        display:inline;
-        text-align: center;
-        overflow: auto;
-        font-size: 12px;
-        box-shadow: none;
-    }
-    #box8 {
-        display: none;
     }
     #box2, #box4, #box5, #box7 {
         padding-top:42vh;
@@ -241,7 +206,7 @@ h2 {
         line-height:66vh;
         transform:rotate(12deg);
     }
-    #mobBox {
+    #box7 {
         margin-bottom: 10%;
     }
 }
