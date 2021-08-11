@@ -158,7 +158,7 @@ h2 {
 
     .container{
         grid-template-columns: 1fr;
-        gap:1%;
+        gap:0.1%;
         grid-template-rows: repeat(4,auto);
     }
     .box {
@@ -180,9 +180,6 @@ h2 {
         min-height:45vh;
         width:86vw;
         border: 1px solid gainsboro;
-    }
-    #box7 {
-        margin-bottom:5%;
     }
     #box2 p, #box4 p, #box5 p, #box7 p {
         margin-left: 40vw;
@@ -214,7 +211,7 @@ h2 {
     }
     .container{
         grid-template-columns: 1fr;
-        gap:0.5%;
+        gap:0.2%;
         grid-template-rows: repeat(8,auto);
     }
     .box {
@@ -228,14 +225,13 @@ h2 {
         text-align: justify;
         font-size: 12px;
         box-shadow: none;
-        margin-bottom: 10%;
     }
     #box8 {
         display: none;
     }
     #box2, #box4, #box5, #box7 {
         padding-top:42vh;
-        height:34vh;
+        height:auto;
         width:84vw;
         border: 1px solid gainsboro;
         box-shadow: 5px 5px 8px 1px lightsteelblue;
