@@ -204,15 +204,14 @@ h2 {
         display: inline;
         width:15%;
         margin: 0 auto;
-        border:1px none 1px none solid black;
         margin-bottom: 5%;
         margin-top:1%;
+        font-size: 14px;
     }
     .btnCollapse {
         display: none;
         width:15%;
         margin: 0 auto;
-        border:1px none 1px none solid black;
         margin-bottom: 5%;
     }
     .github {
@@ -273,14 +272,12 @@ h2 {
         display: inline;
         width:30%;
         margin: 0 auto;
-        border:1px none 1px none solid black;
         margin-bottom: 5%;
     }
     .btnCollapse {
         display: none;
         width:30%;
         margin: 0 auto;
-        border:1px none 1px none solid black;
         margin-bottom: 5%;
     }
     .github {
