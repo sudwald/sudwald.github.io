@@ -26,8 +26,8 @@
         </div>
         </a>
 
-        <div class='box' id='mobBox'>
-            <a href="https://github.com/sudwald/sudwald.github.io/tree/main/story">Github Repo</a/>
+        <div class='box mobBox' id='mobBox1'>
+            <div class='github'><a href="https://github.com/sudwald/sudwald.github.io/tree/main/story">Github Repo</a/></div>
             <p><b>Idea:</b> to tell you a bit about me, make a fun throwback to my PC past, and practise pure CSS
             <p><b>Approach:</b> "Form1" was constructed using formatted divs and a radial gradient for the dotted background. 
                 Delayed animations were used to co-ordinate the typing effect, image carousel, and the story itself.</p>
@@ -37,6 +37,8 @@
                 I would refactor the page to make a portrait version. 
                 Alternatively, I'm keen to explore telling a story in different ways, for example scrollytelling.</p>
         </div>
+        <button class='btnExpand' id='btnExpandMobBox1'>See more</button>
+        <button class='btnCollapse' id='btnCollapseMobBox1'>See less</button>
 
         <a class='boxLink' href='./readfrench/index.html'>
         <div class='box' id='box4'>
@@ -47,8 +49,8 @@
         </div>
         </a>
 
-        <div class='box' id='mobBox'>
-            <a href="https://github.com/sudwald/sudwald.github.io/tree/main/readfrench">Github Repo</a/>
+        <div class='box mobBox' id='mobBox2'>
+            <div class='github'><a href="https://github.com/sudwald/sudwald.github.io/tree/main/readfrench">Github Repo</a/></div>
             <p><b>Idea:</b> my great love in life is languages (I speak 5!) and I'm a particular advocate of learning by reading. 
                 I wanted to try out an idea to enable complete beginners to start reading in French. 
             <p><b>Approach:</b> a Javascript array of objects [{"french": __, "english":___}] acts as the dictionary. 
@@ -63,6 +65,8 @@
                 The use of a span to demarcate translatable blocks within the html was also unwieldy. 
                 This was the very first project I completed and once I learn more back-end I would love to refactor it to make use of databases and a cleaner data structure.</p>
         </div>
+        <button class='btnExpand' id='btnExpandMobBox2'>See more</button>
+        <button class='btnCollapse' id='btnCollapseMobBox2'>See less</button>
 
         <a class='boxLink' href='./bookcollage'>
         <div class='box' id='box5'>
@@ -73,14 +77,16 @@
         </div>
         </a>
 
-        <div class='box' id='mobBox'>
-            <a href="https://github.com/sudwald/bookcollage">Github Repo</a/>
+        <div class='box mobBox' id='mobBox3'>
+            <div class='github'><a href="https://github.com/sudwald/bookcollage">Github Repo</a/></div>
             <p><b>Idea:</b> I'm in a lot of online reading groups, and people love to make and share collages of books they've read - but this often involves looking up the books individually, saving the cover images, and making your own collage. For my first React app, I wanted to make the process quicker! I also wanted to incorporate my first API data.</p>
             <p><b>Approach:</b> The app uses the Google Books API to fetch book covers matching a user's search. The user can then add or remove covers from their collage, change the order, customise the look of their collage, and add captions and star ratings.</p>
             <p><b>Challenges:</b> With so many customisation options and seven components, the most challenging element was definitely state management, and controlling the passage of props such that every component had access to the data and functions it needed. Ironically, I recall wishing there was an easier, more central way to store my data... enter Redux ;)</p>
             <p><b>Room to improve:</b> the big missing feature here is the ability to download the collage (currently users have to print screen). I had CORS vs canvas issues which - after several days of hairpulling on Google - I felt couldn't be solved client-side. I'd love to come back to this project one day and put that right! </p>
             <p>Having also since learnt Redux and learnt greater economy in React, I would also definitely implement cleaner state management and cleaner code in general (for example favouring functional components and hooks over class components and constructors) in future.</p>
         </div>
+        <button class='btnExpand' id='btnExpandMobBox3'>See more</button>
+        <button class='btnCollapse' id='btnCollapseMobBox3'>See less</button>
 
         <a class='boxLink' href='./clock'>
         <div class='box' id='box7'>
@@ -91,8 +97,8 @@
         </div>
         </a>
 
-        <div class='box' id='mobBox'>
-            <a href="https://github.com/sudwald/clock">Github Repo</a/>
+        <div class='box mobBox' id='mobBox4'>
+            <div class='github'><a href="https://github.com/sudwald/clock">Github Repo</a/></div>
             <p><b>Idea:</b> I used to love playing this card game as a child, but the cards would end up in order, which was a hassle to shuffle! So when I decided to make a card game to practise using Redux for state management, this was my first choice!
             <p><b>Approach: </b> I used Redux Toolkit and employed two slices, cardSlice, which tracked the position of cards, and playSlice, which tracked gameplay e.g. wins and losses. </p>
                 <p>The initial state of cardSlice was an array containing one object per card with the following keys: 
@@ -111,6 +117,8 @@
             <p>I achieved this by designing a grid, positioning each card pile on the grid in a circular fashion, and then rotating them to varying degrees. I also used logic to dynamically assign class and id attributes to cards based on state, enabling dynamic rendering.</p>
             <p><b>Room to improve:</b> It would be interesting to explore drag and drop, or even to apply what I have learnt to another card game which involves more user choice - as the outcome of this game is pre-ordained!</p>
         </div>
+        <button class='btnExpand' id='btnExpandMobBox4'>See more</button>
+        <button class='btnCollapse' id='btnCollapseMobBox4'>See less</button>
 
         <div class='box' id='box8'>
             <a href="https://github.com/sudwald/sudwald.github.io/tree/main/story">Github Repo</a/>
@@ -172,5 +180,6 @@
         </div>
 
     </div>
+    <script src="./index.js"/></script>
 </body>
 </html>

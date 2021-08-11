@@ -58,7 +58,7 @@ h2 {
     width: 41.715vh;
 }
 
-#mobBox {
+.mobBox {
     display: none;
 }
 
@@ -136,6 +136,14 @@ h2 {
     font-family: 'Permanent Marker';
 }
 
+.btnExpand {
+    display:none;
+}
+
+.btnCollapse{
+    display:none;
+}
+
 /* MEDIA QUERY FOR LANDSCAPE MOBILE */
 @media screen and (orientation:landscape) and (max-width: 992px) {
     h1{
@@ -164,9 +172,9 @@ h2 {
     .box {
         width:90%;
     }
-    #mobBox {
+    .mobBox {
         display: inline;
-        height:auto; 
+        height:30vh; 
         padding:1% 3%;
         width:90vw;
         text-align: justify;
@@ -191,6 +199,24 @@ h2 {
         line-height:100vh;
         transform:rotate(12deg);
         background-color: white;
+    }
+    .btnExpand {
+        display: inline;
+        width:15%;
+        margin: 0 auto;
+        border:none;
+        margin-bottom: 5%;
+        margin-top:1%;
+    }
+    .btnCollapse {
+        display: none;
+        width:15%;
+        margin: 0 auto;
+        border: none;
+        margin-bottom: 5%;
+    }
+    .github {
+        text-align:center;
     }
 }
 
@@ -217,14 +243,15 @@ h2 {
     .box {
         width:90%;
     }
-    #mobBox {
-        height:auto; 
+    .mobBox {
+        height:15vh; 
         padding:1% 3%;
         width:90vw;
         display:inline;
         text-align: justify;
         font-size: 12px;
         box-shadow: none;
+        overflow:hidden;
     }
     #box8 {
         display: none;
@@ -241,5 +268,22 @@ h2 {
         width:110%;
         line-height:66vh;
         transform:rotate(12deg);
+    }
+    .btnExpand {
+        display: inline;
+        width:30%;
+        margin: 0 auto;
+        border:1px none 1px none solid black;
+        margin-bottom: 5%;
+    }
+    .btnCollapse {
+        display: none;
+        width:30%;
+        margin: 0 auto;
+        border:1px none 1px none solid black;
+        margin-bottom: 5%;
+    }
+    .github {
+        text-align:center;
     }
 }
