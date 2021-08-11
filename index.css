@@ -266,7 +266,7 @@ h2 {
     #box2::after, #box4::after, #box5::after, #box7::after {
         height:51%;
         width:110%;
-        line-height:66vh;
+        line-height:120vw;
         transform:rotate(12deg);
     }
     .btnExpand {
