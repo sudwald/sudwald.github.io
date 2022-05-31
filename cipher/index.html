@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <title>Cipher</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Parisienne&family=Princess+Sofia&display=swap" rel="stylesheet">
+        <link href="./Resources/style.css" rel='stylesheet' type='text/css'/>   
+    </head>
+    <body>
+        <div id='gridcontainer'>
+        <header id='header'>
+            <h1 id='h1'>Cipher</h1>
+        </header>
+        <main>
+            <div id="englishText">
+                <h2>Scramble it</h2>
+                <textarea id="entryText" name="entryText" rows=17 onkeyup="runCipher()"></textarea>
+                <pre class="resultTextClass" id="resultText"></pre>
+            </div>
+            <div id="reverseText">
+                <h2>Unscramble it</h2>
+                <textarea id="reverseEntryText" name="reverseEntryText" rows=17 onkeyup="runReverseCipher()"></textarea>
+                <pre class="resultTextClass" id="reverseResultText"></pre>
+            </div>
+        </main>
+        <script src="./Resources/script.js"/></script>
+    </div>
+    </body>
+</html>

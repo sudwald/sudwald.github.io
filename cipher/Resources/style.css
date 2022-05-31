@@ -1,0 +1,137 @@
+* {
+    font-family:Poppins;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin:0;
+    padding:0;
+    text-align:center;
+    overflow: auto;
+}
+
+#gridcontainer {
+    width:100%;
+    display:grid;
+    grid-template-areas: "header" "main";
+}
+
+h1 {
+    position:relative; 
+    z-index:3;
+    font-size: 5.5em;
+    font-family:Parisienne, cursive;
+    margin-top:1.5vh;
+    margin-bottom:0;
+}
+
+h2 {
+    position:relative; 
+    z-index:3;
+    margin:0px;
+    font-size:1em;
+    padding:2%;
+}
+
+header {
+    grid-area: header;
+    height: 23vh;
+    background-image: url("./banner.jpg");
+    background-size: cover;
+    background-position-y: 30%;
+    position:relative;
+    z-index:1;
+}
+
+header::after {
+    content: ' ';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #87cefa, #fff5ee, #ff6347);
+    opacity: .7;
+    z-index:2
+}
+
+main {
+    grid-area: main;
+    background-color:seashell;
+    display:grid;
+    grid-template-areas: "p1 p2";
+    min-height:77vh;
+}
+
+#englishText, #reverseText {
+    font-size:26px;
+    font-weight:bolder;
+    word-spacing: 0.5em;
+    margin:0 auto;
+    width:100%;
+}
+
+#englishText {
+    grid-area: p1;
+    height:100%;
+}
+
+#reverseText {
+    grid-area: p2;
+    height:100%;
+}
+
+.resultTextClass {
+    font-size:0.6em;
+    text-align:start; 
+    padding-left: 10%;
+    width:41vw;
+    overflow-wrap: break-word;
+}
+
+textarea {
+    width:80%;
+    height:50%;
+    font-size:0.6em;
+}
+
+h3 {
+    font-size:1.2em;
+}
+
+@media only screen and (max-width: 950px) {
+    h1{
+    font-size:4.5em;
+    margin-top:6vh;
+    }
+    main {
+        grid-template-areas: "p1" "p2";
+        height:auto;
+    }
+    .resultTextClass {
+        width:80vw;
+    }
+    textarea {
+        height: 26px;vh;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    h1{
+    font-size:3.5em;
+    margin-top:6vh;
+    }
+    main {
+        grid-template-areas: "p1" "p2";
+        height:auto;
+    }
+    .resultTextClass {
+        width:80vw;
+    }
+    textarea {
+        height:26vh;
+    }
+}
