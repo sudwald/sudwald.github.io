@@ -76,12 +76,12 @@ main {
 
 #englishText {
     grid-area: p1;
-    height:100%;
+    height:60vh;
 }
 
 #reverseText {
     grid-area: p2;
-    height:100%;
+    height:60vh;
 }
 
 .resultTextClass {
@@ -89,7 +89,7 @@ main {
     text-align:start; 
     padding-left: 10%;
     width:41vw;
-    overflow-wrap: break-word;
+    min-height:20vh;
 }
 
 textarea {
